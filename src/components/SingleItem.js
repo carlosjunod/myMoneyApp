@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 
 class singleItem extends Component {
-  render() {
+    constructor(){
+        super();
+        this.removeThis = this.removeThis.bind(this);
+    }
+
+    removeThis(){
+        this.props.removeItem(this.props.keyval)
+        console.log('-------------- reached');
+        console.log(this.props.keyval);
+    }
+
+    render() {
+
 
     return (
         <li className="item">
             <div className="buttons col-item">
-                <span className="del" onClick={this.props.removeItem(this.props.keyval)}>delete</span>
+                <span className="del" onClick={(e) => this.removeThis(e)}>delete</span>
                 <span className="edit">edit</span>
             </div>
             <div className="item-title col-item">

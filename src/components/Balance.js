@@ -4,6 +4,7 @@ import SingleItem from './SingleItem';
 class Balance extends Component {
 
   render() {
+      //removeItem={this.props.removeItem}
     return (
       <ul>
           {Object.keys(this.props.actualState).map(key => <SingleItem key={key} details={this.props.actualState[key]} keyval={key} removeItem={this.props.removeItem}/>)}

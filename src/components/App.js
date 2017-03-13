@@ -5,7 +5,6 @@ import Balance from './Balance';
 import Aside from './Aside';
 import AddExpense from './AddExpense';
 import StatusBalance from './StatusBalance';
-// import logo from './logo.svg';
 import './css/App.css';
 
 class App extends Component {
@@ -28,21 +27,21 @@ constructor(){
         console.log(items);
     }
 
+    removeItem = (key) => {
+        const items = {...this.state.elementsList};
+        delete items[key];
+        this.setState({elementsList: items})
+    };
+
+    sendValue(){
+        
+    }
+
     // removeItem = (key) => {
-    //     console.log('entering to deletemode');
-    //     console.log(key);
-    //     const items = {...this.state.items};
+    //     const items = {...this.state.elementsList};
     //     delete items[key];
     //     this.setState({elementsList: items})
     // };
-
-    removeItem(index) {
-        //     console.log('entering to deletemode');
-        //     console.log(key);
-        this.setState((prevState) => ({
-            elementsList: prevState.elementsList.filter((_, i) => i !== index)
-        }));
-    }
 
 
 
