@@ -1,8 +1,4 @@
-body{
-    background-color: blue;
-
-    h1{
-        color: red;
-
-    }
-}
+@import "./utilities/reset";
+@import "./utilities/variables";
+@import "./modules/typography";
+@import "./app"
